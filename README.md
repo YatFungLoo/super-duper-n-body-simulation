@@ -12,6 +12,8 @@ The first test (proof of concept) for the project consists of a two body simulat
 
 To compile: `gcc -o test1 .\test_basicTwoBodySim.cpp -lm -lstdc++`
 
+*Judging from the output, the simulation does not seem to be working properly: there is no change in the positions*
+
 ## Theoretical Background
 
 *This section should contain the theoretical background on N-Body problems, N-Body algorithms, and Parallelization*
