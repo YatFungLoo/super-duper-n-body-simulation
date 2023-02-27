@@ -6,6 +6,12 @@ The program is intended to be run on some massive HPC clusters currently availab
 
 This project is pedagogical in nature, and part of the intent is to demonstrate the principles of N-Body and HPC in a clear fashion.
 
+## Proof of concept
+
+The first test (proof of concept) for the project consists of a two body simulation using the Euler integration scheme. The simulation uses arbitrary units for every quantity, but the values used correspond to the order of magnitude of celestial bodies in the solar system in astronomical units. The simulation produces as output a `.out` file containing the values of the positions of the two bodies at every step, as well as the corresponding time.
+
+To compile: `gcc -o test1 .\test_basicTwoBodySim.cpp -lm -lstdc++`
+
 ## Theoretical Background
 
 *This section should contain the theoretical background on N-Body problems, N-Body algorithms, and Parallelization*
