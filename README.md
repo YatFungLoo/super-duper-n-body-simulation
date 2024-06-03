@@ -30,9 +30,14 @@ $$ \vec{F} = \sum_i m\vec{a}_i $$
 
 **Law of Universal Gravitation**
 
-$$ \vec{F}_i = \sum_j \frac{G m_i m_j}{ |\vec{r}_j - \vec{r}_i |^2 } \hat{r}_{ji} $$
 
-$$ \vec{a}_i = \sum_j G m_j \frac{\vec{r}_j - \vec{r}_i }{|\vec{r}_j - \vec{r}_i |^3 } $$
+```math
+\vec{F}_i = \sum_j \frac{G m_i m_j}{ |\vec{r}_j - \vec{r}_i |^2 } \hat{r}_{ji}
+```
+
+```math
+\vec{a}_i = \sum_j G m_j \frac{\vec{r}_j - \vec{r}_i }{|\vec{r}_j - \vec{r}_i |^3 }
+```
 
 ### On N-Body Algorithms
 
