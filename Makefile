@@ -6,19 +6,17 @@ EXE=2BodySim
 INC=
 SRC=test_basicTwoBodySim.cpp
 
-# CXX=g++
-CXX=gcc
-CXXFLAGS=
-LFLAGS=
-# LDFLAGS=-lsfml-graphics -lsfml-window -lsfml-system
-LDFLAGS=-lm -lstdc++
+CXX=g++
+CXXFLAGS=-g
+LFLAGS=-lm -lstdc++
+LDFLAGS=-lsfml-graphics -lsfml-window -lsfml-system
 
 .SUFFIXES:
 .SUFFIXES: .cpp .o
 
-OBJ=$(SRC:.cpp=.o) 
+OBJ=$(SRC:.cpp=.o)
 
-.cpp.o:	
+.cpp.o:
 	$(CXX) $(CXXFLAGS) -c $<
 
 all:	$(EXE)
@@ -31,4 +29,4 @@ $(EXE):	$(OBJ)
 $(OBJ):	$(MF)
 
 clean:
-	rm -f $(OBJ) $(EXE) core
+	rm -f $(OBJ) $(EXE) core *.out
