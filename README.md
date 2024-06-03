@@ -6,7 +6,7 @@ The program is intended to be run on some massive HPC clusters currently availab
 
 This project is pedagogical in nature, and part of the intent is to demonstrate the principles of N-Body and HPC in a clear fashion.
 
-## Output demo
+## Output demo (with SFML)
 ![alt text](nbody_sfml_demo.gif)
 
 ## Proof of concept
