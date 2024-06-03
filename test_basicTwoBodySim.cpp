@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 
     if (dispMode == true)
     {
-        sf::RenderWindow window(sf::VideoMode(600, 600), "2Body");
+        sf::RenderWindow window(sf::VideoMode(1200, 600), "2Body");
         // Load font.
         if (!font.loadFromFile("Candy.ttf"))
         {
@@ -178,26 +178,26 @@ void dispBody(double t, Particle *particle_1, Particle *particle_2, sf::RenderWi
 {
     window->clear(sf::Color::White);
 
-    const auto scale = 1000;
+    const auto scale = 10000;
+    const auto offset_x = -100;
+    const auto offset_y = 200;
     // const auto scale = 1000000;
-    sf::Text text(std::to_string(t), font, 50);
+    sf::Text text(std::to_string(t), font, 20);
     text.setFillColor(sf::Color::Red);
-    text.setPosition(300, 300);
-
     window->draw(text);
 
     sf::CircleShape shape1(5);
     shape1.setFillColor(sf::Color::Blue);
     auto x1 = particle_1->x * scale;
     auto y1 = particle_1->y * scale;
-    shape1.setPosition(x1 + 300, y1 + 300);
+    shape1.setPosition(x1 + offset_x, y1 + offset_y);
     window->draw(shape1);
 
     sf::CircleShape shape2(5);
     shape2.setFillColor(sf::Color::Green);
     auto x2 = particle_2->x * scale;
     auto y2 = particle_2->y * scale;
-    shape2.setPosition(x2 + 300, y2 + 300);
+    shape2.setPosition(x2 + offset_x, y2 + offset_y);
     window->draw(shape2);
     window->display();
 }
