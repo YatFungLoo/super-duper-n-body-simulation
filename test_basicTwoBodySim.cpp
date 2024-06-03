@@ -88,7 +88,8 @@ int main(int argc, char **argv)
         {
             std::cout << "can't load font" << std::endl;
         }
-        while (window.isOpen() && t <= t_max)
+        // while (window.isOpen() && t <= t_max)
+        while (window.isOpen())
         {
             sf::Event event;
             while (window.pollEvent(event))
@@ -175,10 +176,29 @@ void update_positions(struct Particle *particle_1, struct Particle *particle_2)
 
 void dispBody(double t, Particle *particle_1, Particle *particle_2, sf::RenderWindow *window)
 {
+    window->clear(sf::Color::White);
+
+    const auto scale = 1000;
+    // const auto scale = 1000000;
     sf::Text text(std::to_string(t), font, 50);
     text.setFillColor(sf::Color::Red);
-    window->clear(sf::Color::White);
+    text.setPosition(300, 300);
+
     window->draw(text);
+
+    sf::CircleShape shape1(5);
+    shape1.setFillColor(sf::Color::Blue);
+    auto x1 = particle_1->x * scale;
+    auto y1 = particle_1->y * scale;
+    shape1.setPosition(x1 + 300, y1 + 300);
+    window->draw(shape1);
+
+    sf::CircleShape shape2(5);
+    shape2.setFillColor(sf::Color::Green);
+    auto x2 = particle_2->x * scale;
+    auto y2 = particle_2->y * scale;
+    shape2.setPosition(x2 + 300, y2 + 300);
+    window->draw(shape2);
     window->display();
 }
 
